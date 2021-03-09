@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Movies App!</title>
+    </head>
+    <body>
+        <form>
+            <label for="title">Title</label>
+            <input type="text" name="title" id="title" placeholder="Title"></input>
+            <label for="rating">Rating</label>
+            <input type="number" name="rating" id="rating" placeholder="Rating" min=0 max=10></input>
+            <input type="submit" id="submit"></input>
+        </form> 
+        <ul>
+
+        </ul>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+        $('form').on('submit', function(e){
+            e.preventDefault();
+            let rate = $('#rating').val();
+            let title = $('#title').val();
+            $('ul').append('<li></li>');
+            $('li').last().text(title + rate).append('<button>"Remove"</button>');
+        });
+
+        $('ul').on('click', 'li button', function(){
+            $(this).parent().remove();
+        })
+
+    </script>
+    </body>
+</html>

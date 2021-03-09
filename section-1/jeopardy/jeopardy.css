@@ -1,0 +1,60 @@
+/* some colors you may find useful:
+  #115ff4
+  #060ce9
+  #28a200
+  #8d2ab5
+  #74119c
+*/
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+table {
+  color: white;
+  border-collapse: collapse;
+  border: 2px solid #28a200;
+  height: 90%;
+  background-color: #115ff4;
+}
+
+td, th{
+  height: 15%;
+  width: 15%;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #28a200;
+  border-collapse: collapse;
+  font-size: .9em;
+}
+
+html, body {
+  height: 100%;
+  background-color: #74119c;
+}
+
+#start {
+  padding: 8px;
+  font-size: 1.5em;
+}
